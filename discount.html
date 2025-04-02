@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Discount Codes</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      text-align: center;
+      background-color: #f4f4f9;
+      padding: 20px;
+    }
+    #discount-container {
+      margin-top: 20px;
+    }
+    .speech-bubble {
+      display: inline-block;
+      padding: 15px 20px;
+      margin: 10px;
+      background: #ffeb3b;
+      border-radius: 10px;
+      font-size: 1.2em;
+      font-weight: bold;
+      color: #333;
+      box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+    }
+  </style>
+</head>
+<body>
+
+  <h1>할인코드 목록</h1>
+  <p>아래는 현재 활성화된 할인코드입니다:</p>
+  
+  <!-- 코드가 표시될 컨테이너 -->
+  <div id="discount-container"></div>
+
+  <script>
+    // 할인코드 JSON 데이터 예제
+    const discountData = [
+      { title: "2025년 4월 할인코드 1", code: "네이버 No.1" },
+      { title: "2025년 4월 할인코드 2", code: 블로그" },
+      { title: "2025년 4월 할인코드 3", code: "공개테스트" },
+      { title: "2025년 4월 할인코드 4", code: "중입니다" }
+    ];
+
+    // HTML에 동적으로 할인코드 생성
+    const container = document.getElementById('discount-container');
+
+    discountData.forEach((item) => {
+      const bubble = document.createElement('div');
+      bubble.classList.add('speech-bubble');
+      bubble.innerText = `${item.title}: ${item.code}`;
+      container.appendChild(bubble);
+    });
+  </script>
+
+</body>
+</html>
